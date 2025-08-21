@@ -3,7 +3,7 @@ view: fct_order_items {
   view_label: "Order Items"
   label: "Order Items"
 
-  # Step 1: Update id -> order_item_id
+  # Step 1: Update id -> order_item_id #
 
   dimension: order_item_id {
     primary_key: yes
