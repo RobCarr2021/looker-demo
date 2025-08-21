@@ -13,7 +13,7 @@ view: fct_order_items {
 
   dimension_group: created {
     type: time
-    description: "The date/timestamp the line item was delivered."
+    description: "The date/timestamp the line item was created."
     timeframes: [
       raw,
       time,
@@ -30,7 +30,7 @@ view: fct_order_items {
 
   dimension_group: delivered {
     type: time
-    description: "The date/timestamp the line item was created."
+    description: "The date/timestamp the line item was delivered."
     timeframes: [
       raw,
       time,
