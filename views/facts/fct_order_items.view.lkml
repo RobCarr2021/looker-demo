@@ -6,6 +6,7 @@ view: fct_order_items {
   # Step 1: Update id -> order_item_id #
 
   dimension: order_item_id {
+    alias: [id]
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
@@ -40,7 +41,7 @@ view: fct_order_items {
       quarter,
       year
     ]
-    sql: ${TABLE}.delivered ;;
+    sql: ${TABLE}.delivered_at ;;
   }
 
 
