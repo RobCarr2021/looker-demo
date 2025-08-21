@@ -23,7 +23,7 @@ view: fct_order_items {
       quarter,
       year
     ]
-    sql: ${TABLE}.delivered ;;
+    sql: ${TABLE}.created_at ;;
   }
 
   # Step 2: Add delivered_at dimension_group
@@ -40,7 +40,7 @@ view: fct_order_items {
       quarter,
       year
     ]
-    sql: ${TABLE}.created_at ;;
+    sql: ${TABLE}.delivered ;;
   }
 
 
