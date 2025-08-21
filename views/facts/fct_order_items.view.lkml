@@ -3,9 +3,10 @@ view: fct_order_items {
   view_label: "Order Items"
   label: "Order Items"
 
-  # Step 1: Update id -> order_item_id
+  # Step 1: Update id -> order_item_id #
 
-  dimension: id {
+  dimension: order_item_id {
+    alias: [id]
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
@@ -27,6 +28,22 @@ view: fct_order_items {
   }
 
   # Step 2: Add delivered_at dimension_group
+
+  dimension_group: delivered {
+    type: time
+    description: "The date/timestamp the line item was delivered."
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.delivered_at ;;
+  }
+
 
   dimension: order_id {
     type: number
