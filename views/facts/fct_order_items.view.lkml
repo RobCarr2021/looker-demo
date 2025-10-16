@@ -7,7 +7,7 @@ view: fct_order_items {
 
   dimension: order_item_id {
     alias: [id]
-    primary_key: yes
+    primary_key: no
     type: number
     sql: ${TABLE}.id ;;
   }
